@@ -1,0 +1,18 @@
+*
+*/**
+
+# https://code.visualstudio.com/docs/extensions/publish-extension#_advanced-usage : Development dependencies listed in devDependencies will be automatically ignored, you don't need to add them to the .vscodeignore file.
+node_modules
+docs
+scripts
+test
+package-lock.json
+
+# filter out's subdirs
+!out/dist/main.js
+
+!package.json
+!resources/icon.png
+!README.md
+!LICENSE
+!CHANGELOG.md

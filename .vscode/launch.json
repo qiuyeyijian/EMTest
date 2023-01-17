@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "extensionHost",
+      "request": "launch",
+      "name": "Debug EMTest",
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "${workspaceFolder}/out/Workspace/CPP",
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "env": {
+        "EMTEST_DEBUG": "true"
+      },
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ]
+    }
+  ]
+}

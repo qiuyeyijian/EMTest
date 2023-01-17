@@ -1,0 +1,51 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "createTmpWorkspace",
+      "type": "shell",
+      "command": "mkdir",
+      "args": [
+        "-p",
+        "out/Workspace/CPP"
+      ],
+      "windows": {
+        "args": [
+          "out\\Workspace\\CPP"
+        ]
+      },
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "esbuild-watch",
+      "type": "npm",
+      "script": "esbuild-watch",
+      "problemMatcher": "$tsc-watch",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "never",
+        "panel": "shared"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "dependsOn": [
+        "createTmpWorkspace"
+      ]
+    }
+  ]
+}

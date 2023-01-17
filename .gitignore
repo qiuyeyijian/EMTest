@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+test
+out
+*.vsix
+docs/.vitepress/dist
+package-lock.json
+
